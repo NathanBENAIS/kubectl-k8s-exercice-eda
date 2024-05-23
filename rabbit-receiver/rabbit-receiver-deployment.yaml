@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rabbit-receiver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbit-receiver
+  template:
+    metadata:
+      labels:
+        app: rabbit-receiver
+    spec:
+      containers:
+      - name: rabbit-receiver
+        image: nathanbenais/rabbit-receiver
+        env:
+        - name: RABBITMQ_URL
+          value: "amqp://production-rabbitmqcluster:5672"
+        - name: QUEUE
+          value: "tasks"

@@ -45,4 +45,4 @@ Et tester la connection avec le script `send.js`.
 
 On veut maintenant faire monter à l'échelle automatiquement le projet receiver.
 
-=> créer un <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">autoscaler</a> pour le déploiement du projet.
+=> créer un <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">autoscaler</> pour le déploiement du projet.
